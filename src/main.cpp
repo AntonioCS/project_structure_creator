@@ -39,9 +39,6 @@ void loopTemplateFolder(const boostfs::path &templateDirectory, const boostfs::p
         for (auto &item : boostfs::directory_iterator(templateDirectory)) {
             if (boostfs::is_directory(item)) {
                 boostfs::path tmpPath(destinationFolder);
-                //cout << typeid(item.path().filename().string()).name() << endl;
-                //cout << item.path().filename().string() << endl;
-                //exit(1);
                 tmpPath.append(item.path().filename().string());
 
                 if (boostfs::is_directory(tmpPath) == false) {
@@ -91,7 +88,6 @@ string readFileContents(const char *pathToFile) {
     return fileContents;
 }
 
-//make && build\pcreator.exe --projectFolder C:\Users\antoniocs\Projects\Personal\cpp\ProjectCreator\test --projectName TestProject
 int main(int argc, char **argv) {
     InputParser input(argc, argv);
 
