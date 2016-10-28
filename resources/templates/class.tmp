@@ -1,0 +1,19 @@
+
+/* 
+ * File:   test.cpp
+ * Author: António Simões <antoniocs@gmail.com>
+ * 
+ * Created on 16 October 2016, 18:30
+ */
+
+#include "${CLASS_NAME}.h"
+
+${CLASS_NAME}::${CLASS_NAME}() {
+}
+
+${CLASS_NAME}::${CLASS_NAME}(const ${CLASS_NAME} &orig) {
+}
+
+${CLASS_NAME}::~${CLASS_NAME}() {
+}
+

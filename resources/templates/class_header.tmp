@@ -1,0 +1,14 @@
+#ifndef ${HEADER_GUARD}_H
+#define ${HEADER_GUARD}_H
+
+class ${CLASS_NAME} {
+public:
+    ${CLASS_NAME}();
+    ${CLASS_NAME}(const ${CLASS_NAME} &orig);
+    virtual ~${CLASS_NAME}();
+private:
+
+};
+
+#endif /* ${HEADER_GUARD}_H */
+
