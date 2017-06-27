@@ -51,7 +51,7 @@ void loopTemplateFolder(const boostfs::path &templateDirectory, const boostfs::p
             }
         }
     } else {
-        cout << "No template folder: " << templateDirectory << endl;
+        cout << "No template folder: " << templateDirectory << '\n';
     }
 }
 
@@ -88,6 +88,13 @@ string readFileContents(const char *pathToFile) {
     return fileContents;
 }
 
+/**
+ Possible way to implement getting the parameters {{vars}}
+ Detect all the vars in the files and just ask for them in a loop or allow the user to do something like
+ * --data var=value
+ 
+ */
+
 int main(int argc, char **argv) {
     InputParser input(argc, argv);
 
@@ -97,7 +104,7 @@ int main(int argc, char **argv) {
 
         createProject(input.getCmdParams("projectFolder"), input.getCmdParams("projectName"), type, templateType, "hello");
     } else {
-        cout << "Missing parameters" << endl;
+        cout << "Missing parameters" << '\n';
     }
 
     return 0;
