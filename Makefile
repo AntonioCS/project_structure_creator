@@ -2,7 +2,7 @@ BIN=pcreator
 BUILD_DIR=./build
 OBJ_DIR=./obj
 TARGET=$(BUILD_DIR)/$(BIN)
-CFLAGS=-std=c++14 -Wall -g -Werror
+CFLAGS=-std=c++14 -Wall -g -Werror -O1
 LDFLAGS=
 LDLIBS=-lboost_system-mt -lboost_filesystem-mt
 CC=g++
@@ -21,7 +21,7 @@ all: $(TARGET)
 
 $(TARGET): $(OBJ)
 	$(dir_guard)
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $? $(LDLIBS)
 #copy all the resources to the build dir so that the
 #executable can access everything in ./resources/<RESOURCE>
 #added the @ to suppress the echoing
